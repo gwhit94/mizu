@@ -16,7 +16,19 @@ export class MainComponent implements OnInit {
   constructor(private adviceAPIService: AdviceAPIService) { }
   gongAudio = <HTMLMediaElement> document.querySelector("#gongAudio");
 
-  ngOnInit() {  }
+  ngOnInit() {
+    // auto plays background loop
+    // This requires the user to allow autoplay in order to function
+    // BG audio loop could also be extended past the current 1 minute it is, but this requires larger load and not necessary in Proof of Concept
+     function playBG(){
+      let audioBG = new Audio();
+      audioBG.src = "../../../assets/deerscare.mp3";
+      audioBG.load();
+      audioBG.play();
+      audioBG.loop = true;
+    }
+    playBG();
+    }
   getAdvice(){
     this.adviceAPIService.getAdvice().subscribe(data => {
       const keys = data.headers.keys();
@@ -31,9 +43,9 @@ export class MainComponent implements OnInit {
   }
 
   playGong(){
-    let audio = new Audio();
-    audio.src = "../../../assets/gongaudio.wav";
-    audio.load();
-    audio.play();
+    let gongAudio = new Audio();
+    gongAudio.src = "../../../assets/gongaudio.wav";
+    gongAudio.load();
+    gongAudio.play();
   }
 }

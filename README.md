@@ -2,13 +2,28 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
+Proof of concept
+
 Click the Gong to retrieve a piece of advice.
 
 ## Utilized Resources
 
 The following resources were used to create this application: 
 
-    - [Advice Slip](https://adviceslip.com)
+API used for advice
+    - (https://adviceslip.com)
+
+ Audio
+    - (https://myNoise.net)
+    - (https://freesound.org/people/LloydEvans09/sounds/185824/)
+
+Image Assets
+    - (https://www.pngrepo.com)
+    - (https://www.kisspng.com)
+    - (https://en.wikipedia.org/wiki/Pebble#/media/File:Pebbleswithquarzite.jpg)
+
+Liquid Distortion 
+    - (https://github.com/codrops/LiquidDistortion)
 
 ## Development server
 
