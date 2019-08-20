@@ -14,19 +14,26 @@ export class MainComponent implements OnInit {
   error: string;
 
   constructor(private adviceAPIService: AdviceAPIService) { }
+  gongAudio = <HTMLMediaElement> document.querySelector("#gongAudio");
 
-  ngOnInit() {
-  }
+  ngOnInit() {  }
   getAdvice(){
     this.adviceAPIService.getAdvice().subscribe(data => {
       const keys = data.headers.keys();
       this.headers = keys.map(key => `${key}: ${data.headers.get(key)}`);
-      
+
       this.adviceObj = data.body,
       this.advice = this.adviceObj.slip.advice,
       err => console.error(err),
       () => console.log('Done getting advice')
     });
+    this.playGong();
   }
 
+  playGong(){
+    let audio = new Audio();
+    audio.src = "../../../assets/gongaudio.wav";
+    audio.load();
+    audio.play();
+  }
 }

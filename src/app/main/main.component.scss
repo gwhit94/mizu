@@ -1,0 +1,26 @@
+#container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#background{
+    background-image: url(../../assets/pebbles2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 1;
+}
+#gong{
+    height: 150px;
+    width: 150px;
+}
+
+.slide {
+    display: block;
+    position: absolute;
+    height: 200px !important;
+    width: 200px !important;
+    background: red;
+}

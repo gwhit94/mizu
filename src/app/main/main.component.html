@@ -1,2 +1,9 @@
-<p>{{advice}}</p>
-<button (click)="getAdvice()">Advice</button>
+<div id="background">
+    <div id="container">
+        <img id="gong" (click)="getAdvice()" src="../../assets/gong2.png">
+        <audio id="gongAudio" src="../../assets/gongaudio.wav" type="audio/wav">
+            <!-- <source src="../../assets/gongaudio.wav" type="audio/wav" preload> -->
+        </audio>
+        <p>{{advice}}</p>
+    </div>
+</div>
