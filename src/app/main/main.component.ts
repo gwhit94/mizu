@@ -13,7 +13,13 @@ export class MainComponent implements OnInit {
   headers: string[];
   error: string;
 
-  constructor(private adviceAPIService: AdviceAPIService) { }
+  addShake(){
+    document.querySelector('#gong').classList.add("shake");
+    setTimeout(function(){ document.querySelector('#gong').classList.remove("shake"); }, 500);
+  }
+
+
+  constructor(private adviceAPIService: AdviceAPIService) {   }
   gongAudio = <HTMLMediaElement> document.querySelector("#gongAudio");
 
   ngOnInit() {
@@ -28,7 +34,8 @@ export class MainComponent implements OnInit {
       audioBG.loop = true;
     }
     playBG();
-    }
+  }
+
   getAdvice(){
     this.adviceAPIService.getAdvice().subscribe(data => {
       const keys = data.headers.keys();

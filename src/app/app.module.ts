@@ -7,12 +7,14 @@ import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdviceAPIService } from './advice-api.service';
+import { ParallaxDirective } from './parallax.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    AboutComponent
+    AboutComponent,
+    ParallaxDirective
   ],
   imports: [
     BrowserModule,
